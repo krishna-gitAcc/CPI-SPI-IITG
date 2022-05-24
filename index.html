@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Assets/bootstrap.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>CPI-SPI Calculator IITG</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">CPI-SPI Calculator</div>
+        <div class="container">
+            <div class="row text-center my-4">
+                <div class="col-lg-4">
+                    <div class="dropdown courses">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Department
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" id="06">BSBE</a>
+                            <a class="dropdown-item" href="#" id="07">CHE</a>
+                            <a class="dropdown-item" href="#" id="22">CST</a>
+                            <a class="dropdown-item" href="#" id="04">CE</a>
+                            <a class="dropdown-item" href="#" id="01">CSE</a>
+                            <a class="dropdown-item" href="#" id="01">ECE</a>
+                            <a class="dropdown-item" href="#" id="08">EEE</a>
+                            <a class="dropdown-item" href="#" id="21">EP</a>
+                            <a class="dropdown-item" href="#" id="23">MNC</a>
+                            <a class="dropdown-item" href="#" id="03">ME</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 cpi-spi">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            CPI/SPI
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" id="cpi">CPI</a>
+                            <a class="dropdown-item" href="#" id="spi">SPI</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 semester">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SEM Completed
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#" id="one">First Semester</a>
+                            <a class="dropdown-item" href="#" id="second">Second Semester</a>
+                            <a class="dropdown-item" href="#" id="three">Third Semester</a>
+                            <a class="dropdown-item" href="#" id="four">Fourth Semester</a>
+                            <a class="dropdown-item" href="#" id="five">Fifth Semester</a>
+                            <a class="dropdown-item" href="#" id="six">Sixth Semester</a>
+                            <a class="dropdown-item" href="#" id="seven">Seventh Semester</a>
+                            <a class="dropdown-item" href="#" id="eight">Eighth Semester</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- first year start -->
+        <div class="text-center">
+            <!-- First Semester -->
+            <div class="container my-4" id="FirstSemCard">
+                <div class="card">
+                    <h2 class="card-header">First Semester</h2>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Course</th>
+                                <th scope="col"> Credit</th>
+                                <th scope="col">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-uppercase">
+                            <tr>
+                                <td id="CH101">CH101</td>
+                                <td>8</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_FirstSem_CH101" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_FirstSem_CH101">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <td id="CH110">CH110</td>
+                                <td>3</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_FirstSem_CH110" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_FirstSem_CH110">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <td id="EE101">EE101</td>
+                                <td>8</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_FirstSem_EE101" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_FirstSem_EE101">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <td id="MA101">MA101</td>
+                                <td id="MA101credit">8</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_FirstSem_MA101" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_FirstSem_MA101">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <td>CE101</td>
+                                <td>7</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_FirstSem_CE101" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_FirstSem_CE101">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr id="ph101">
+                                <td>PH101</td>
+                                <td>6</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_FirstSem_PH101" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_FirstSem_PH101">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr id="ph110/me110">
+                                <td>PH110/ME110</td>
+                                <td>3</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_FirstSem_PH110/ME110" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_FirstSem_PH110/ME110">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- first semester end -->
+
+
+
+            <!-- second semester -->
+
+            <div class="container my-4" id="SecondSemCard">
+                <div class="card">
+                    <h2 class="card-header">Second Semester</h2>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Course</th>
+                                <th scope="col"> Credit</th>
+                                <th scope="col">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-uppercase">
+                            <tr>
+                                <td id="bt101">BT101</td>
+                                <td>6</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_SecondSem_BT101" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_SecondSem_BT101">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <td id="cs101">CS110</td>
+                                <td>6</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_SecondSem_CS101" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_SecondSem_CS101">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <td id="cs110">CS110</td>
+                                <td>3</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_SecondSem_CS110" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_SecondSem_CS110">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <td id="ee102">EE102</td>
+                                <td id="ee102credit">3</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_SecondSem_EE102" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_SecondSem_EE102">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <td>MA102</td>
+                                <td>8</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_SecondSem_MA102" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_SecondSem_MA102">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr id="me101">
+                                <td>ME101</td>
+                                <td>8</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_SecondSem_ME101" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_SecondSem_ME101">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr id="ph102">
+                                <td>PH102</td>
+                                <td>6</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_SecondSem_PH102" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_SecondSem_PH102">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                            <tr id="ph110/me110">
+                                <td>PH110/ME110</td>
+                                <td>3</td>
+                                <td><span>
+                                        <div class="dropdown">
+                                            <a class="btn btn-success dropdown-toggle" href="#" role="button"
+                                                id="Grade_SecondSem_PH110/ME110" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"></a>
+                                            <div class="dropdown-menu" aria-labelledby="Grade_SecondSem_PH110/ME110">
+                                                <a class="dropdown-item" href="#">AA/A's</a>
+                                                <a class="dropdown-item" href="#">AB</a>
+                                                <a class="dropdown-item" href="#">BB</a>
+                                                <a class="dropdown-item" href="#">BC</a>
+                                                <a class="dropdown-item" href="#">CC</a>
+                                                <a class="dropdown-item" href="#">CD</a>
+                                                <a class="dropdown-item" href="#">DD</a>
+                                                <a class="dropdown-item" href="#">F</a>
+                                                <a class="dropdown-item" href="#">Drop</a>
+                                            </div>
+                                        </div>
+                                    </span></td>
+                            </tr>
+                        </tbody>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- first year end  -->
+
+
+
+        <!-- body container -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
