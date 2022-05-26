@@ -24,7 +24,7 @@ function Load(){
         "CE",
         "CSE",
         "ECE",
-        "EE",
+        // "EE",
         "EP",
         "MNC",
         "ME",
