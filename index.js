@@ -1,6 +1,6 @@
 let trash = document;
 let count = 0;
-let sem, Department, SelectorBtn, Clone, TypeOf, fakeNo, YearArray, SPI_Sem;
+let sem, Department, SelectorBtn, Clone, TypeOf, fakeNo, YearArray, SPI_Sem; //TypeOf-->what we have to calculate; sem-->Semester till we have to calculate CPI OR SPI
 let ArrayNEW = [];
 let TotalCreditsPoint = 0, TotlaCredit = 0;
 let ExpectedCredits;
@@ -28,7 +28,7 @@ function Load(){
         "EP",
         "MNC",
         "ME",
-        "BOX",
+        // "BOX",
         "btn_cal"
     ];
     $.each(DepartmentNames, function(index, value){
@@ -37,20 +37,20 @@ function Load(){
 }
 
 function Click(){
-    $("#dropdownTypeList").on("click", OntypeClick);
-    $("#dropdownYearList").on("click", OnYearClick);
+    $("#dropdownTypeList").on("click", OntypeClick);    //OnTypeClick function work properly
+    $("#dropdownYearList").on("click", OnYearClick);    //OnYear Click work properly
     $("#dropdownList").on("click", OnDeptClick);
     $("#btn_CPI").on("click", OnCpiCal);
 
     // estimate cpi button to be added
-    $("estimate_CPI_Btn").on("click", OnEstimate);
+    // $("estimate_CPI_Btn").on("click", OnEstimate);
 
     $("#calculateagain_btn").on("click", OnCalculateAgain);
 }
 
 function OntypeClick(e){
-    TypeOf = e.target.textContent;
-    console.log(TypeOf);
+    TypeOf = e.target.textContent;          //TypeOf --> What we have to calculate CPI/SPI
+    console.log(TypeOf);        //
     if(TypeOf === "SPI"){
         $("#dropdownYearMenu").text("Semester");
         $("#btn_CPI").text("Calculate SPI");
@@ -60,25 +60,26 @@ function OntypeClick(e){
         $("#dropdownYearMenu").text("Semester Completed");
     }
     $("#dropdownTypeLink").text(e.target.textContent);
-    $("#dropdownTypeLink").prop("disabled", "true");
+    $("#dropdownTypeLink").prop("disabled", true);
     $("#dropdownTypeLink").css("opacity", "0.5");
     $("#dropdownYearMenu").prop("disabled", false);
     $("#dropdownYearMenu").css("opacity", "1");
+    e.preventDefault();
 }
 
 function OnYearClick(e){
-    var sem = e.target.id;
+    var sem = e.target.id;                  //sem --> semester till which we have to calculate the spi or cpi
     console.log(sem);
     $("#dropdownYearMenu").text(e.target.textContent);
 
-    $("#dropdownTypeLink").prop("disabled", "true");
-    $("#dropdownTypeLink").css("opacity", "0.5");
+    // $("#dropdownTypeLink").prop("disabled", true);
+    // $("#dropdownTypeLink").css("opacity", "0.5");
     $("#dropdownYearMenu").prop("disabled", true);
     $("#dropdownYearMenu").css("opacity", "0.5");
     $("#dropdownMenuLink").prop("disabled", false);
     $("#dropdownMenuLink").css("opacity", "1");
 
-    e.preventDefault(); //to be asked from sarthak bhagwat;
+    e.preventDefault(); //prevent the ancher tag to reload the page
 
 
 }
@@ -88,11 +89,14 @@ function OnDeptClick(e){
     console.log(Department.textContent);
     $("#dropdownMenuLink").prop("disabled", true);
     $("#dropdownMenuLink").css("opacity", "0.5");
-    document.getElementById("btn_cal").style.display = "initial";   // to be done by jquery
+    $("#btn_cal").show();
+    // document.getElementById("btn_cal").style.display = "initial";   // to be done by jquery
 
 
     // var newId = "FirstSem_" + e.target.textContent;
 
+
+    //Assignint the First and Second  Semester to corresponding Department we selected.
     $("#FirstSemCard").attr("id", "FirstSem_" + e.target.textContent);
     // document.getElementById("FirstSemCard").id = newId;
     // $("'#'+ newId").attr("display", "initial");
@@ -113,4 +117,11 @@ function OnDeptClick(e){
             }
         }
     }
+}
+function OnCpiCal(e){
+
+}
+
+function OnCalculateAgain(e){
+
 }
