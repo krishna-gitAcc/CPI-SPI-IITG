@@ -23,7 +23,7 @@ function Load(){
         "CST",
         "CE",
         "CSE",
-        "CEC",
+        "ECE",
         "EE",
         "EP",
         "MNC",
