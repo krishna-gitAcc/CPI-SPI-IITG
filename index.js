@@ -24,10 +24,10 @@ function Load(){
         "CE",
         "CSE",
         "ECE",
-        // "EE",
+        "EE",
         "EP",
         "MNC",
-        "ME",
+        // "ME",
         "BOX",
         "btn_cal"
     ];
