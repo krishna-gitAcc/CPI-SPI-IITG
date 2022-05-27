@@ -14,6 +14,7 @@ const SemArr = [
     "EighthSem",
 ]
 
+
 $("#dropdownMenuLink").css("opacity", "0.5");
 $("#dropdownMenuLink").prop("disabled", true);
 $("#dropdownYearMenu").css("opacity", "0.5");
@@ -210,63 +211,67 @@ function OnDeptClick(e) {
 
     //Fow now we don't need Add course Button
 
-    // switch (sem) {
-    //     case "eight": {
-    //         let AddBtn = document.createElement("tr");
-    //         AddBtn.id = "courseaddBtn_8";
-    //         AddBtn.innerHTML = `<td><div class="container" id='courseaddDiv-8'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
-    //         trash
-    //             .getElementById(`EightSem_${Department.textContent}`)
-    //             .getElementsByTagName("tbody")[0]
-    //             .appendChild(AddBtn);
-    //     }
-    //     case "seven": {
-    //         let AddBtn = document.createElement("tr");
-    //         AddBtn.id = "courseaddBtn_7";
-    //         AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-7'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
-    //         trash
-    //             .getElementById(`SeventhSem_${Department.textContent}`)
-    //             .getElementsByTagName("tbody")[0]
-    //             .appendChild(AddBtn);
-    //     }
-    //     case "six": {
-    //         let AddBtn = document.createElement("tr");
-    //         AddBtn.id = "courseaddBtn_6";
-    //         AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-6'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
-    //         trash
-    //             .getElementById(`SixthSem_${Department.textContent}`)
-    //             .getElementsByTagName("tbody")[0]
-    //             .appendChild(AddBtn);
-    //     }
-    //     case "five": {
-    //         let AddBtn = document.createElement("tr");
-    //         AddBtn.id = "courseaddBtn_5";
-    //         AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-5'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
-    //         trash
-    //             .getElementById(`FifthSem_${Department.textContent}`)
-    //             .getElementsByTagName("tbody")[0]
-    //             .appendChild(AddBtn);
-    //     }
-    //     case "four": {
-    //         let AddBtn = document.createElement("tr");
-    //         AddBtn.id = "courseaddBtn_4";
-    //         AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-4'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
-    //         trash
-    //             .getElementById(`FourthSem_${Department.textContent}`)
-    //             .getElementsByTagName("tbody")[0]
-    //             .appendChild(AddBtn);
-    //     }
-    //     case "third": {
-    //         let AddBtn = document.createElement("tr");
-    //         AddBtn.id = "courseaddBtn_3";
-    //         AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-3'><button class="btn btn-outline-success">Add Course</button></div></td><td></td><td></td>`;
-    //         trash
-    //             .getElementById(`ThirdSem_${Department.textContent}`)
-    //             .getElementsByTagName("tbody")[0]
-    //             .appendChild(AddBtn);
-    //         break;
-    //     }
-    // }
+    switch (sem) {
+        case "eight": {
+            let AddBtn = document.createElement("tr");
+            AddBtn.id = "courseaddBtn_8";
+            AddBtn.innerHTML = `<td><div class="container" id='courseaddDiv-8'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
+            trash
+                .getElementById(`EightSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddBtn);
+        }
+        case "seven": {
+            let AddBtn = document.createElement("tr");
+            AddBtn.id = "courseaddBtn_7";
+            AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-7'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
+            trash
+                .getElementById(`SeventhSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddBtn);
+        }
+        case "six": {
+            let AddBtn = document.createElement("tr");
+            AddBtn.id = "courseaddBtn_6";
+            AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-6'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
+            trash
+                .getElementById(`SixthSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddBtn);
+        }
+        case "five": {
+            let AddBtn = document.createElement("tr");
+            AddBtn.id = "courseaddBtn_5";
+            AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-5'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
+            trash
+                .getElementById(`FifthSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddBtn);
+        }
+        case "four": {
+            let AddBtn = document.createElement("tr");
+            AddBtn.id = "courseaddBtn_4";
+            AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-4'><button class="btn btn-outline-success" id="courseaddBtn">Add Course</button></div></td><td></td><td></td>`;
+            trash
+                .getElementById(`FourthSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddBtn);
+        }
+        case "third": {
+            let AddBtn = document.createElement("tr");
+            AddBtn.id = "courseaddBtn_3";
+            AddBtn.innerHTML = `<td ><div class="container" id='courseaddDiv-3'><button class="btn btn-outline-success">Add Course</button></div></td><td></td><td></td>`;
+            trash
+                .getElementById(`ThirdSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddBtn);
+            break;
+        }
+    }
+    SelectorBtn = trash.getElementsByClassName("btn btn-outline-success");
+    for (i = 0; i < SelectorBtn.length; i++) {
+        SelectorBtn[i].addEventListener("click", AddCourseBtn);
+    }
     if (TypeOf === "SPI") {
         YearArray = [
             "FirstSem",
@@ -477,4 +482,120 @@ function Calculation() {
             }
         }
     });
+}
+
+function AddCourseBtn(e) {
+    let AddCourse = trash.createElement("tr");
+    AddCourse.innerHTML = `<td><input class="form-control-plaintext text-center" placeholder="Extra Course" type="text"></td>
+    <td><input class="form-control-plaintext text-center" placeholder="10*" type="number"></td>
+    <td><span><div class="dropdown">
+                                <a class="btn btn-success dropdown-toggle" href="#" role="button" id="Extra_Course_${count}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                <div class="dropdown-menu" aria-labelledby="Extra_Course_${count}">
+                                    <a class="dropdown-item" href="#">AA/A's</a>
+                                                    <a class="dropdown-item" href="#">AB</a>
+                                                    <a class="dropdown-item" href="#">BB</a>
+                                                    <a class="dropdown-item" href="#">BC</a>
+                                                    <a class="dropdown-item" href="#">CC</a>
+                                                    <a class="dropdown-item" href="#">CD</a>
+                                                    <a class="dropdown-item" href="#">DD</a>
+                                                    <a class="dropdown-item" href="#">F</a>
+                                                    <a class="dropdown-item" href="#">Drop</a>
+                                </div>
+                </div>
+        </span>
+    </td>`;
+    count = count + 1;
+    switch (e.target.parentElement.id) {
+        case "courseaddDiv-3": {
+            trash
+                .getElementById(`ThirdSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddCourse);
+            trash
+                .getElementById(`ThirdSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(
+                    trash.getElementById(
+                        e.target.parentElement.parentElement.parentElement.id
+                    )
+                );
+            break;
+        }
+        case "courseaddDiv-4": {
+            trash
+                .getElementById(`FourthSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddCourse);
+            trash
+                .getElementById(`FourthSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(
+                    trash.getElementById(
+                        e.target.parentElement.parentElement.parentElement.id
+                    )
+                );
+            break;
+        }
+        case "courseaddDiv-5": {
+            trash
+                .getElementById(`FifthSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddCourse);
+            trash
+                .getElementById(`FifthSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(
+                    trash.getElementById(
+                        e.target.parentElement.parentElement.parentElement.id
+                    )
+                );
+            break;
+        }
+        case "courseaddDiv-6": {
+            trash
+                .getElementById(`SixthSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddCourse);
+            trash
+                .getElementById(`SixthSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(
+                    trash.getElementById(
+                        e.target.parentElement.parentElement.parentElement.id
+                    )
+                );
+            break;
+        }
+        case "courseaddDiv-7": {
+            trash
+                .getElementById(`SeventhSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddCourse);
+            trash
+                .getElementById(`SeventhSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(
+                    trash.getElementById(
+                        e.target.parentElement.parentElement.parentElement.id
+                    )
+                );
+            break;
+        }
+        case "courseaddDiv-8": {
+            trash
+                .getElementById(`EightSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(AddCourse);
+            trash
+                .getElementById(`EightSem_${Department.textContent}`)
+                .getElementsByTagName("tbody")[0]
+                .appendChild(
+                    trash.getElementById(
+                        e.target.parentElement.parentElement.parentElement.id
+                    )
+                );
+            break;
+        }
+    }
+    SelectorLoad();
 }
