@@ -5,6 +5,14 @@ let ArrayNEW = [];
 let TotalCreditsPoint = 0, TotlaCredit = 0;
 let ExpectedCredits;
 let ExpectedCPI;
+const SemArr = [
+    "ThirdSem",
+    "FourthSem",
+    "FifthSem",
+    "SixthSem",
+    "SeventhSem",
+    "EighthSem",
+]
 
 $("#dropdownMenuLink").css("opacity", "0.5");
 $("#dropdownMenuLink").prop("disabled", true);
@@ -105,214 +113,97 @@ function OnDeptClick(e) {
     $("#SecondSemCard").attr("id", "SecondSem_" + e.target.textContent);
     $("#dropdownMenuLink").text(e.target.textContent);
     console.log(sem);
+    $(`#${e.target.textContent}`).show();
+    var temp = SemArr;
+    const first_second = [
+        "FirstSem",
+        "SecondSem"
+    ]
     switch (sem) {
         case "eight": {
-            document.getElementById(`${e.target.textContent}`).style.display = "initial";
-            document.getElementById(`FirstSem_${e.target.textContent}`).style.display = "initial";
-            document.getElementById(`SecondSem_${e.target.textContent}`).style.display = "initial";
+            temp.splice(0, 6);
+            $.each(temp, function (index, value) {
+                console.log(`#${value}_${e.target.textContent}`)
+                $(`#${value}_${e.target.textContent}`).hide();
+            })
+            $.each(first_second, function (index, value) {
+                $(`#${value}_${e.target.textContent}`).show();
+            })
             break;
         }
         case "seven": {
-            trash.getElementById(`${e.target.textContent}`).style.display =
-                "initial";
-            trash.getElementById(
-                `EightSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SeventhSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `SixthSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FifthSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FourthSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `ThirdSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FirstSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `SecondSem_${e.target.textContent}`
-            ).style.display = "initial";
+            temp.splice(0, 5);
+            $.each(temp, function (index, value) {
+                console.log(`#${value}_${e.target.textContent}`)
+                $(`#${value}_${e.target.textContent}`).hide();
+            })
+            $.each(first_second, function (index, value) {
+                $(`#${value}_${e.target.textContent}`).show();
+            })
             break;
         }
         case "six": {
-            trash.getElementById(`${e.target.textContent}`).style.display = "initial";
-            trash.getElementById(
-                `EightSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SeventhSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SixthSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FifthSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FourthSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `ThirdSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FirstSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `SecondSem_${e.target.textContent}`
-            ).style.display = "initial";
+            temp.splice(0, 4);
+            $.each(temp, function (index, value) {
+                console.log(`#${value}_${e.target.textContent}`)
+                $(`#${value}_${e.target.textContent}`).hide();
+            })
+            $.each(first_second, function (index, value) {
+                $(`#${value}_${e.target.textContent}`).show();
+            })
             break;
         }
         case "five": {
-            trash.getElementById(`${e.target.textContent}`).style.display =
-                "initial";
-            trash.getElementById(
-                `EightSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SeventhSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SixthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FifthSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FourthSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `ThirdSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FirstSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `SecondSem_${e.target.textContent}`
-            ).style.display = "initial";
+            temp.splice(0, 3)
+            $.each(temp, function (index, value) {
+                console.log(`#${value}_${e.target.textContent}`)
+                $(`#${value}_${e.target.textContent}`).hide();
+            })
+            $.each(first_second, function (index, value) {
+                $(`#${value}_${e.target.textContent}`).show();
+            })
             break;
         }
         case "four": {
-            trash.getElementById(`${e.target.textContent}`).style.display =
-                "initial";
-            trash.getElementById(
-                `EightSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SeventhSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SixthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FifthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FourthSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `ThirdSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FirstSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `SecondSem_${e.target.textContent}`
-            ).style.display = "initial";
+            temp.splice(0, 2)
+            $.each(temp, function (index, value) {
+                console.log(`#${value}_${e.target.textContent}`)
+                $(`#${value}_${e.target.textContent}`).hide();
+            })
+            $.each(first_second, function (index, value) {
+                $(`#${value}_${e.target.textContent}`).show();
+            })
             break;
         }
         case "three": {
-            trash.getElementById(`${e.target.textContent}`).style.display =
-                "initial";
-            trash.getElementById(
-                `EightSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SeventhSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SixthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FifthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FourthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `ThirdSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `FirstSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `SecondSem_${e.target.textContent}`
-            ).style.display = "initial";
+            temp.splice(0, 1)
+            $.each(temp, function (index, value) {
+                console.log(`#${value}_${e.target.textContent}`)
+                $(`#${value}_${e.target.textContent}`).hide();
+            })
+            $.each(first_second, function (index, value) {
+                $(`#${value}_${e.target.textContent}`).show();
+            })
             break;
         }
         case "two": {
-            trash.getElementById(`${e.target.textContent}`).style.display =
-                "initial";
-            trash.getElementById(
-                `EightSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SeventhSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SixthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FifthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FourthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `ThirdSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FirstSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `SecondSem_${e.target.textContent}`
-            ).style.display = "initial";
+            temp.splice(0, 0)
+            $.each(temp, function (index, value) {
+                console.log(`#${value}_${e.target.textContent}`)
+                $(`#${value}_${e.target.textContent}`).hide();
+            })
+            $.each(first_second, function (index, value) {
+                $(`#${value}_${e.target.textContent}`).show();
+            })
             break;
         }
         case "one": {
-            trash.getElementById(`${e.target.textContent}`).style.display =
-                "initial";
-            trash.getElementById(
-                `EightSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SeventhSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `SixthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FifthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FourthSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `ThirdSem_${e.target.textContent}`
-            ).style.display = "none";
-            trash.getElementById(
-                `FirstSem_${e.target.textContent}`
-            ).style.display = "initial";
-            trash.getElementById(
-                `SecondSem_${e.target.textContent}`
-            ).style.display = "none";
-            break;
+            temp.splice(0, 0)
+            $.each(temp, function (index, value) {
+                console.log(`#${value}_${e.target.textContent}`)
+                $(`#${value}_${e.target.textContent}`).hide();
+            })
+            $(`#FirstSem_${e.target.textContent}`).show();
         }
 
     }
@@ -421,9 +312,9 @@ function OnDeptClick(e) {
             }
         }
 
-        YearArray.forEach(element => {
-            document.getElementById(`${element}_${e.target.textContent}`).style.display = "none";
-        });
+        $.each(YearArray, function (index, value) {
+            $(`#${value}_${e.target.textContent}`).hide();
+        })
 
     }
 
@@ -453,7 +344,7 @@ function OnCalculateAgain() {
 }
 function SelectorLoad() {
     let Selector = trash.getElementsByClassName("dropdown-menu");
-    for (i = 2; i < Selector.length; i++) {
+    for (i = 3; i < Selector.length; i++) {
         Selector[i].addEventListener("click", OnTableClick);
     }
 }
