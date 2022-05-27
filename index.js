@@ -142,8 +142,7 @@ function OnDeptClick(e) {
             break;
         }
         case "six": {
-            trash.getElementById(`${e.target.textContent}`).style.display =
-                "initial";
+            trash.getElementById(`${e.target.textContent}`).style.display = "initial";
             trash.getElementById(
                 `EightSem_${e.target.textContent}`
             ).style.display = "none";
@@ -432,6 +431,7 @@ function OnDeptClick(e) {
 }
 function OnCpiCal() {
     Calculation();
+    console.log(TotalCreditsPoint, TotalCredits, (TotalCreditsPoint / TotalCredits).toFixed(2))
     let Final_CPI = (TotalCreditsPoint / TotalCredits).toFixed(2);
     trash.getElementById("modalMess").style.display = "none";
     trash.getElementById("modalCPI").style.display = "none";
@@ -439,7 +439,7 @@ function OnCpiCal() {
     if (TotalCredits === 0 || TotalCreditsPoint === 0) {
         $('#modalCPI').modal('show');
     } else {
-        if (Type_Of === "SPI")
+        if (TypeOf === "SPI")
             trash.getElementById('CPI_Message').textContent = `Your SPI is ${Final_CPI}`;
         else
             trash.getElementById('CPI_Message').textContent = `Your CPI is ${Final_CPI}`;
@@ -508,7 +508,7 @@ function Calculation() {
         }
         ArrayNEW = ArrayYear;
     }
-    else if (Type_Of === "SPI") {
+    else if (TypeOf === "SPI") {
         ArrayNEW = [SPI_Sem];
     }
 
@@ -540,28 +540,38 @@ function Calculation() {
                 );
             }
             switch (SubjectGrade) {
-                case "A/A*": {
+                case "AA/A's": {
                     TotalCreditsPoint = TotalCreditsPoint + 10 * SubjectCredit;
                     TotalCredits = TotalCredits + SubjectCredit;
                     break;
                 }
-                case "B": {
+                case "AB": {
+                    TotalCreditsPoint = TotalCreditsPoint + 9 * SubjectCredit;
+                    TotalCredits = TotalCredits + SubjectCredit;
+                    break;
+                }
+                case "BB": {
                     TotalCreditsPoint = TotalCreditsPoint + 8 * SubjectCredit;
                     TotalCredits = TotalCredits + SubjectCredit;
                     break;
                 }
-                case "C": {
+                case "BC": {
+                    TotalCreditsPoint = TotalCreditsPoint + 7 * SubjectCredit;
+                    TotalCredits = TotalCredits + SubjectCredit;
+                    break;
+                }
+                case "CC": {
                     TotalCreditsPoint = TotalCreditsPoint + 6 * SubjectCredit;
                     TotalCredits = TotalCredits + SubjectCredit;
                     break;
                 }
-                case "D": {
-                    TotalCreditsPoint = TotalCreditsPoint + 4 * SubjectCredit;
+                case "CD": {
+                    TotalCreditsPoint = TotalCreditsPoint + 5 * SubjectCredit;
                     TotalCredits = TotalCredits + SubjectCredit;
                     break;
                 }
-                case "E": {
-                    TotalCreditsPoint = TotalCreditsPoint + 2 * SubjectCredit;
+                case "DD": {
+                    TotalCreditsPoint = TotalCreditsPoint + 4 * SubjectCredit;
                     TotalCredits = TotalCredits + SubjectCredit;
                     break;
                 }
